@@ -133,7 +133,7 @@ Achou e corrigiu um bug ou tem alguma feature em mente e deseja contribuir?
 Atenção
 -------------
 
-- O desenvolvedor não possui relação com a empresa Correios, o plugin tem por objetivo a otimização dos recursos para e-commerce. 
+- O desenvolvedor não possui relação com a empresa PagSeguro, o plugin tem por objetivo a otimização dos recursos para e-commerce. 
 - O desenvolvedor apenas oferece a integração por meio de código aberto, livre para alterações de qualquer natureza. 
 - O desenvolvedor não autoriza qualquer comercialização não-autorizada deste plugin.
 
