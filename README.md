@@ -23,7 +23,7 @@ Ao instalar irá aparecer esta tela:
 
 * 1 - Clique em Novo Método de pagamento
 
-![passo 2](http://weber.eti.br/images/easyblog_images/91/b2ap3_thumbnail_novo_metodo_pagamento.png)
+![passo 2](http://weber.eti.br/images/easyblog_images/62/cielo/b2ap3_thumbnail_novo_metodo_pagamento.png)
 
 * 2 - Preencha as informações:
 
@@ -116,7 +116,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 Dúvidas
 ----------
 
-https://github.com/luizwbr/Cep-VirtueMart-3/issues
+https://github.com/luizwbr/PagSeguro-Transparente-VirtueMart-3/issues
 
 Contribuições
 -------------
