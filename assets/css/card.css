@@ -1,0 +1,279 @@
+#container_pagseguro ul {
+  padding: 0px !important;
+}
+
+.vertical input {
+  width: 68px;
+}
+
+.cards {
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.cards li {  
+  float: left;
+  height: 38px;
+  margin-right: 8px;
+  text-indent: -9999px;
+  width: 90px;
+  list-style: none;
+  margin: 0px;
+}
+.cards li input, .cards li img{  
+  float: left;
+  width: 55px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  padding: 0px;
+  margin-left: 2px;
+}
+.cards li:last-child {
+  margin-right: 0;
+}
+.cards .visa_electron {
+  background-position: 204px 0;
+}
+.cards .mastercard {
+  background-position: 153px 0;
+}
+.cards .maestro {
+  background-position: 102px 0;
+}
+.cards .discover {
+  background-position: 51px 0;
+}
+.cards .visa.off {
+  background-position: 0 32px;
+}
+.cards .visa_electron.off {
+  background-position: 204px 32px;
+}
+.cards .mastercard.off {
+  background-position: 153px 32px;
+}
+.cards .maestro.off {
+  background-position: 102px 32px;
+}
+.cards .discover.off {
+  background-position: 51px 32px;
+}
+#container_pagseguro form {
+  -webkit-box-shadow: 0 1px 3px #bbbbbb;
+  -moz-box-shadow: 0 1px 3px #bbbbbb;
+  box-shadow: 0 1px 3px #bbbbbb;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f5f5f5));
+  background: -webkit-linear-gradient(#ffffff, #f5f5f5);
+  background: -moz-linear-gradient(#ffffff, #f5f5f5);
+  background: -ms-linear-gradient(#ffffff, #f5f5f5);
+  background: -o-linear-gradient(#ffffff, #f5f5f5);
+  background: linear-gradient(#ffffff, #f5f5f5);
+  background-color: #f8f8f8;
+  border: 5px solid #fff;
+  margin: 0 auto 32px;
+  padding: 12px 24px 24px;
+  width: 90%;
+}
+#container_pagseguro form h2 {
+  color: #555;
+  font-family: "Helvetica Neue", Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  margin-bottom: 0;
+}
+#container_pagseguro form li {
+  padding: 1px 0px;
+  display: inline;
+}
+#container_pagseguro form label {
+  color: #555;
+  display: block;
+  font-size: 14px;
+}
+#container_pagseguro form label small {
+  color: #aaa;
+  font-size: 11px;
+  line-height: 11px;
+  text-trans#container_pagseguro form: uppercase;
+}
+#container_pagseguro form input.field,  #container_pagseguro form select {
+  -webkit-box-shadow: inset 0 1px 3px -1px #aaaaaa;
+  -moz-box-shadow: inset 0 1px 3px -1px #aaaaaa;
+  box-shadow: inset 0 1px 3px -1px #aaaaaa;
+  border: 1px solid #aaa;
+  border-color: #aaa #ddd #ddd #aaa;
+  color: #333;
+  display: block;
+  font-size: 18px;
+  height: 30px;
+  padding: 0 5px;
+  width: 275px;
+  -moz-box-sizing: content-box;
+}
+
+#container_pagseguro form input.radiofield {
+  -webkit-box-shadow: inset 0 0px 0px 0px #ffffff;
+  -moz-box-shadow: inset 0 0px 0px 0px #ffffff;
+  box-shadow: inset 0 0px 0px 0px #ffffff;  
+  border: 1px solid #aaa;
+  border-color: #aaa #ddd #ddd #aaa;
+  color: #333;
+  display: block;
+  font-size: 18px;
+  height: 30px;
+  padding: 0 5px;
+  width: 275px;
+  -moz-box-sizing: content-box;
+}
+
+#container_pagseguro form input.valid {
+  background: url(tick.png) 260px center no-repeat;
+}
+
+#container_pagseguro input.radio_terms {
+  width: auto !important;
+  display: inline;
+}
+
+#container_pagseguro label.label_termos{
+  font-size: 11px;
+  font: 11px Arial;
+  font-family: Arial;
+}
+
+.vertical {
+  overflow: hidden;
+}
+.vertical li {
+  float: left;
+  width: 140px;
+}
+.vertical li .or {
+  color: #aaa;
+  float: left;
+  font-size: 12px;
+  margin-left: -8px;
+  margin-top: 32px;
+}
+/*
+.vertical li:last-child {
+  float: right;
+  text-align: right;
+}
+.vertical li:last-child input {
+  float: right;
+}
+*/
+
+
+
+@media screen and (max-width: 767px) {
+  .demo .numbers ul {
+    margin-left: 0;
+    overflow: hidden;
+  }
+  .demo .numbers ul li {
+    float: left;
+    margin-left: 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+  #container_pagseguro {
+    margin-left: 32px;
+    margin-top: 32px;
+  }
+  #container_pagseguro form {
+    float: left;
+    margin: 0 0 32px;
+  }
+  .demo .numbers {
+    float: right;
+  }
+  .download {
+    clear: both;
+  }
+}
+
+#container_pagseguro li, #container_pagseguro ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.buttonPagsegurotransparente {
+  position: relative !important;
+  width: 200px !important;
+  color: #FFF !important;
+  display: block !important;
+  text-decoration: none !important;
+  /* margin: 0 auto !important; */
+  border-radius: 5px !important;
+  border: solid 1px #20992A !important;
+  background: #44AF34 !important;
+  text-align: center !important;
+  padding: 15px 20px !important;
+  -webkit-transition: all 0.1s !important;
+  -moz-transition: all 0.1s !important;
+  transition: all 0.1s !important;
+  -webkit-box-shadow: 0px 3px 0px #1F9915 !important;
+  -moz-box-shadow: 0px 6px 0px #84261a !important;
+  /* box-shadow: 0px 3px 0px #1F9915 !important; */
+  font-size: 18px;
+  font: 16px;
+}
+
+.buttonPagsegurotransparente:active {
+  -webkit-box-shadow: 0px 0px 0px #1E841A !important;
+  -moz-box-shadow: 0px 1px 0px #84261a !important;
+  /* box-shadow: 0px 0px 0px #22841A !important; */
+  position: relative !important;
+  top: 3px !important;
+  /* background: #62C948 !important; */
+}
+.buttonPagsegurotransparente:hover {
+  background: #62C948 !important;
+}
+
+
+div.div_pagamentos div.conteudo_pagseguro ul {
+  width: 300px;
+}
+
+li.card_li {
+  background: #ECECEC;
+  padding: 6px !important;
+}
+
+input#card_number {
+  background: url(../images/lock.png) no-repeat right #ffffff;
+  background-position: 265px;
+}
+
+span.cvv_span {
+  margin: 0px;
+}
+
+a.info_cvv {
+  background-color: #F3F3F3;
+  border-radius: 0.333em;
+  font-weight: bold;
+  font-size: 1.2em;
+  line-height: 1em;
+  text-align: center;
+  padding: 0.25em 0;
+  width: 1.5em;
+  display: inline-block;
+  text-decoration: none !important;
+  background: -moz-linear-gradient(top, #e5e5e5 0%, #e2e0e1 38%, #d9d3d3 100%);
+  background: -webkit-linear-gradient(top, #E5E5E5 0%,#E2E0E1 38%,#D9D3D3 100%);
+  background: -o-linear-gradient(top, #e5e5e5 0%,#e2e0e1 38%,#d9d3d3 100%);
+  background: -ms-linear-gradient(top, #e5e5e5 0%,#e2e0e1 38%,#d9d3d3 100%);
+  background: linear-gradient(to bottom, #DADADA 0%,#CECECE 38%,#CACACA 100%);
+  float: right;
+  color: #1D51D8;
+  margin: 4px;
+}

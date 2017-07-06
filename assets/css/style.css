@@ -1,0 +1,425 @@
+/*
+    Estilo para o meio do pagamento pagseguro   
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+.mainpagseguro {
+	border: 2px solid #79ba59;
+	color: #333333;
+	font-family: Lato, sans-serif;
+}
+.pg_top {
+	background: url("../images/bgtop.png") top repeat-x;
+	height: 86px;
+}
+.pg_top .pg_dados {
+	font-family: Lato, sans-serif;
+	float: left;
+	margin-left: 20px;
+}
+.pg_top .pg_dados span {
+	line-height: 86px;
+	font-size: 20px;
+	color: #333333;
+	font-weight: bold;
+}
+.pg_nav {
+	float: left;
+	padding: 0px;
+	margin: 0px;
+	padding-top: 14px;
+	padding-left: 20px;
+	list-style: none;
+}
+.pg_nav li {
+	display: inline-block;
+	margin-right: 0px;
+}
+.pg_nav li a {
+	background: #cfcfcf;
+	display: inline-block;
+	-webkit-border-radius: 4px 4px 0px 0px;
+	-moz-border-radius: 4px 4px 0px 0px;
+	border-radius: 4px 4px 0px 0px;
+	font-family: Lato, sans-serif;
+	font-size: 18px;
+	color: #797979;
+	line-height: 65px;
+	height: 65px;
+	padding: 0px 25px;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	text-decoration: none;
+}
+.pg_nav li a:hover,  .pg_nav li.active a {
+	background: #7cbd5b;
+	color: #fff;
+}
+.pg_topright {
+	background: url("../images/topright.png") top right no-repeat;
+	width: 110px;
+	height: 86px;
+	float: right;
+}
+.pg_topleft {
+	background: url("../images/topleft.png") top left no-repeat;
+	width: 39px;
+	height: 86px;
+	float: left;
+}
+.cartoes label {
+	float: left !important;
+	margin-right: 6px !important;
+	background: #eeeeee;
+	border-radius: 2px;
+	-webkit-box-shadow: inset 0 0px 0px 0px #ffffff;
+	-moz-box-shadow: inset 0 0px 0px 0px #ffffff;
+	box-shadow: inset 0 0px 0px 0px #ffffff;
+	border: 1px solid #eeeeee;
+	opacity: 0.5;
+	transition: all 0.2s linear;
+}
+.cartoes label:hover {
+	opacity: 1;
+}
+.rchecked {
+	opacity: 1 !important;
+	border: 1px solid #7cbd5b !important;
+	background: #7cbd5b !important;
+}
+.tabcontent {
+	display: none;
+}
+/**
+
+    Parte do meio Interna 
+
+**/
+
+.mainpagseguro .title {
+	font-family: Lato, sans-serif;
+	color: #333333;
+	font-size: 30px;
+	font-weight: 700;
+	padding-top: 5px;
+	padding-bottom: 15px;
+}
+.mainpagseguro .subtitle {
+	font-family: Lato, sans-serif;
+	color: #6d6d6d;
+	font-size: 20px;
+	clear: both;
+	font-weight: 700;
+}
+.mainpagseguro .cartoes {
+	padding-bottom: 15px;
+}
+.pg_main {
+	padding: 20px;
+}
+.pg_row {
+	clear: both;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.pgc1-2 {
+	width: 40%;
+	margin-right: 20px;
+	float: left;
+}
+.pgc2-1 {
+	float: left;
+	width: 50%;
+}
+.bgcartao {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #eeeeee;
+	padding: 10px;
+	font-size: 16px;
+}
+.clear {
+	clear: both;
+	;
+	height: 1px;
+	width: 1px;
+}
+/* CAMPOS */
+
+.mainpagseguro INPUT[type="text"] {
+	background-color: #cfcfcf;
+	border: 1px solid #cfcfcf;
+	padding: 10px;
+	font-size: 15px;
+	font-family: Lato, sans-serif;
+	color: #333333;
+	margin: 5px 0px;
+	width: 100%;
+	transition: all 0.2s linear;
+	height:inherit !important;
+}
+.mainpagseguro INPUT[type="text"]:focus {
+	background: #FFF;
+	border-color: rgba(82, 168, 236, 0.8);
+	outline: 0;
+	border: 1px solid #7cbd5b;
+	-webkit-box-shadow: inset 3px 0px 0px 0px #7cbd5b;
+	-moz-box-shadow: inset 3px 0px 0px 0px #7cbd5b;
+	box-shadow: inset 3px 0px 0px 0px #7cbd5b;
+}
+.mainpagseguro SELECT {
+	background-color: #eeeeee;
+	border: 1px solid #eeeeee;
+	padding: 10px;
+	font-size: 15px;
+	font-family: Lato, sans-serif;
+	width: 100%;
+	transition: all 0.2s linear;
+	height:inherit !important;
+}
+.mainpagseguro SELECT:focus {
+	background: #FFF;
+	border-color: rgba(82, 168, 236, 0.8);
+	outline: 0;
+	border: 1px solid #7cbd5b;
+	-webkit-box-shadow: inset 3px 0px 0px 0px #7cbd5b;
+	-moz-box-shadow: inset 3px 0px 0px 0px #7cbd5b;
+	box-shadow: inset 3px 0px 0px 0px #7cbd5b;
+}
+.mainpagseguro LABEL {
+	display: block;
+}
+.pgi_cartao INPUT {
+	width: 100%;
+}
+.mainpagseguro .pgi_datavalidade SELECT {
+	float: left;
+	width: 45%;
+	margin-right: 3px;
+	background-color: #cfcfcf;
+	border: 1px solid #cfcfcf;
+	padding: 10px 2px;
+	margin-top: 3px;
+	transition: all 0.2s linear;
+}
+.mainpagseguro .pgi_datavalidade SELECT:focus {
+	background: #FFF;
+}
+.pgi_datavalidade {
+	width: 40%;
+	float: left;
+	padding-right: 10px;
+}
+.pgi_cvv {
+	width: 55%;
+	float: left;
+}
+.mainpagseguro .pgi_cvv INPUT {
+	width: 120px;
+	float: left;
+}
+.mainpagseguro em {
+	font-size: 12px;
+}
+.icquestion {
+	-webkit-mask: url("../images/question.svg") right no-repeat;
+	background: #838383;
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+.pg_dadosp {
+	padding: 10px;
+}
+.pgi_titular {
+	width: 45%;
+	float: left;
+	padding-right: 10px;
+}
+.pgi_cpf {
+	width: 45%;
+	float: left;
+}
+.pgi_datanasc {
+	float: left;
+	;
+	width: 45%;
+	padding-right: 10px;
+}
+.pgi_telefone {
+	float: left;
+	width: 45%;
+}
+.pgcenter {
+	text-align: center;
+	padding-top: 15px;
+}
+.btn-pagar {
+	background: #43a047;
+	font-family: 'Lato', sans-serif;
+	color: #FFF;
+	font-weight: 500;
+	font-size: 20px;
+	border: 0px;
+	border-radius: 6px;
+	padding: 15px 50px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+.btn-pagar:hover {
+	background: #7cbd5b;
+}
+
+@media only screen and (max-width:640px) {
+	.pg_nav li a {
+		font-size: 12px;
+		padding-right: 5px;
+		padding-left: 5px;
+	}
+	.pgi_telefone, .pgi_datanasc, .pgi_cpf, .pgi_titular, .pgi_cvv, .pgi_datavalidade {
+		width: 100%;
+	}
+	.btn-pagar {
+		width: 100%;
+	}
+	.mainpagseguro .title {
+		font-size: 20px;
+	}
+	.mainpagseguro .subtitle {
+		font-size: 16px;
+	}
+	.mainpagseguro .pgi_datavalidade SELECT {
+		float: none;
+		margin-bottom: 5px;
+		width: 100%;
+	}
+	#litabdebito {
+		display: none;
+	}
+}
+
+@media only screen and (max-width:540px) {
+	.pg_top .pg_dados {
+		font-size: 14px;
+		margin-left: 10px;
+	}
+	.pg_top .pg_dados span {
+		font-size: 15px;
+	}
+	.bgcartao, .pg_dadosp {
+		padding: 0px;
+		background: none;
+	}
+	.pgc1-2, .pgc2-1 {
+		width: 100%;
+	}
+	#litabdebito {
+		display: none;
+	}
+	#container_pagseguro {
+		padding-top: 40px;
+	}
+}
+
+#container_pagseguro ul {
+	padding: 0px !important;
+	list-style:none;
+}
+.vertical input {
+	width: 68px;
+}
+.cards {
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+.cards li {
+	
+}
+.cards li input, .cards li img {
+	
+}
+.cards li:last-child {
+	margin-right: 0;
+}
+.cards .visa_electron {
+	background-position: 204px 0;
+}
+.cards .mastercard {
+	background-position: 153px 0;
+}
+.cards .maestro {
+	background-position: 102px 0;
+}
+.cards .discover {
+	background-position: 51px 0;
+}
+.cards .visa.off {
+	background-position: 0 32px;
+}
+.cards .visa_electron.off {
+	background-position: 204px 32px;
+}
+.cards .mastercard.off {
+	background-position: 153px 32px;
+}
+.cards .maestro.off {
+	background-position: 102px 32px;
+}
+.cards .discover.off {
+	background-position: 51px 32px;
+}
+#container_pagseguro form {
+}
+#container_pagseguro form h2 {
+	color: #555;
+	font-family: "Helvetica Neue", Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	margin-bottom: 0;
+}
+#container_pagseguro form li {
+	list-style:none;
+	display: inline;
+}
+#container_pagseguro form label {
+	color: #555;
+	display: block;
+	font-size: 14px;
+}
+#container_pagseguro form label small {
+	color: #aaa;
+	font-size: 11px;
+	line-height: 11px;
+
+}
+#container_pagseguro form input.field, #container_pagseguro form select {
+}
+#container_pagseguro form input.radiofield {
+}
+.div_pagamentos {
+	width: 100% !important;
+	padding:0px !important;
+}
+
+h4.titulo_toggle {
+	background:none !important;
+	padding:0px ;
+	margin:0px;
+	font-family: Lato, sans-serif;
+	color: #333333;
+	font-size: 20px;
+	font-weight: 700;
+	padding-top: 5px !important;
+	padding-bottom: 15px !important;
+}
+
+h4.titulo_toggle label {
+	font-weight: 700 !important;
+}

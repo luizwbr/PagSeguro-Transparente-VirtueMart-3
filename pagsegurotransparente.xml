@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5" type="plugin" group="vmpayment" method="upgrade">    
+    <name>VMPayment - Checkout Transparente compatível com PagSeguro</name>
+    <creationDate>2017</creationDate>
+    <author>Luiz Felipe Weber</author>
+    <authorUrl>http://weber.eti.br</authorUrl>
+    <copyright>Copyright (C) 2017. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>2.0.38</version>
+    <description>Plugin de pagamento
+	&lt;div style=&quot;background:#E5F5FF;border:1px solid #99D6FF;padding:10px;margin:10px; -box-shadow: inset 0px 0px 10px #fff, 0px 0px 5px #ccc; -webkit-box-shadow: inset 0px 0px 10px #fff, 0px 0px 5px #ccc; -moz-box-shadow: inset 0px 0px 10px #fff, 0px 0px 5px #ccc;font-weight:normal;&quot;&gt;
+		&lt;h1&gt;Plugin de pagamento PagSeguro Transparente para Virtuemart 3.0 - Api Transparente.&lt;/h1&gt;
+		&lt;div style=&quot;float:right;width: 20%&quot;&gt;
+		&lt;img src=&quot;../plugins/vmpayment/pagsegurotransparente/checkout_transparente_pagseguro.png&quot; /&gt;
+		&lt;/div&gt;
+		&lt;div&gt;&lt;em&gt;Passo 1&lt;/em&gt; - Crie sua conta PagSeguro ( caso não exista ) e solicite a ativação da &lt;b&gt;PagSeguro Transparente&lt;/b&gt;. &lt;/div&gt;
+		&lt;div&gt;&lt;em&gt;Passo 3&lt;/em&gt; - Habilite o plugin aqui &lt;a href=&quot;index.php?option=com_plugins&amp;view=plugins&amp;filter_search=pagsegurotransparente&quot;&gt;Administrar Plugins&lt;/a&gt;&lt;/div&gt;
+		&lt;div&gt;&lt;em&gt;Passo 4&lt;/em&gt; - Instale Plugin por esta tela &lt;a href=&quot;index.php?option=com_virtuemart&amp;view=paymentmethod&quot;&gt;Métodos de pagamento&lt;/a&gt;&lt;/div&gt;
+		&lt;div&gt;&lt;em&gt;Passo 4.1&lt;/em&gt; - &lt;b&gt;Clique em Novo Método de Pagamento&lt;/b&gt; e preencha as informações:&lt;/div&gt;
+		&lt;div&gt;* Nome do Pagamento: &lt;b&gt;Cartões de crédito e débito, transferência e boleto bancário ( PagSeguro )&lt;/b&gt;&lt;/div&gt;
+		&lt;div&gt;* Publicado: &lt;b&gt;Sim&lt;/b&gt;&lt;/div&gt;
+		&lt;div&gt;* Descrição do pagamento: &lt;b&gt;Pague com cartão de crédito, boleto ou saldo PagSeguro&lt;/b&gt;&lt;/div&gt;
+		&lt;div&gt;* Método de pagamento: &lt;b&gt;PagSeguro&lt;/b&gt;&lt;/div&gt;
+		&lt;div&gt;* Grupo de Compradores: &lt;b&gt;-default-&lt;/b&gt;&lt;/div&gt;
+		&lt;div&gt;&lt;em&gt;Passo 4.2&lt;/em&gt; - &lt;b&gt;Clique em Salvar&lt;/b&gt;.&lt;/div&gt;
+		&lt;div&gt;&lt;em&gt;Passo 5&lt;/em&gt; - Na &lt;b&gt;aba configurações&lt;/b&gt;, preencha os dados:&lt;/div&gt;
+
+		&lt;div&gt; &lt;br /&gt;Configurações do Plugin de Pagamento &lt;/div&gt;		
+		&lt;div&gt;* Logotipos: &lt;b&gt;&lt;/b&gt;&lt;/div&gt;
+		&lt;div&gt;* Modo de teste &lt;b&gt;( Sim ou Não ) &lt;/b&gt;&lt;/div&gt;
+		&lt;div&gt;* Token (teste) &lt;/div&gt;		
+		&lt;div&gt;* Email de acesso (teste) &lt;/div&gt;		
+		&lt;div&gt;* Token (produção) &lt;/div&gt;		
+		&lt;div&gt;* Email de Acesso (produção) &lt;/div&gt;				
+		&lt;div&gt;* Valor Mínimo &lt;b&gt; 0,01 &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt;* Status Postado pelo PagSeguro &lt;b&gt; (Compra Aprovada, Em Análise, Estornada, Aguardando Pagamento, Cancelada ) &lt;/b&gt;&lt;/div&gt;				
+		&lt;div&gt; &lt;/div&gt;		
+		&lt;div&gt; &lt;br /&gt;Configuração Parcelamento &lt;/div&gt;		
+		&lt;div&gt;** Max. Parcelas Sem Juros &lt;b&gt; 3 &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt;** Max. Parcelas Com Juros &lt;b&gt; 12 &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt;** Taxa de Juros Crédito à vista &lt;b&gt; (2.99) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt;** Taxa de Juros Parcelado &lt;b&gt; (2.99) &lt;/b&gt;&lt;/div&gt;				
+		&lt;div&gt; &lt;br /&gt;Formas de Pagamento Aceitas &lt;/div&gt;		
+		&lt;div&gt;* Ativar Boleto &lt;b&gt; (Sim ou Não) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt;* Ativar Cartões de Crédito &lt;b&gt; (Sim ou Não) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt;* Ativar Débito em Conta &lt;b&gt; (Sim ou Não) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt; &lt;br /&gt;Cartões de Crédito Aceitos &lt;/div&gt;		
+		&lt;div&gt;* Visa &lt;b&gt; (Sim ou Nâo) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt;* Mastercard &lt;b&gt; (Sim ou Nâo) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt;* Hipercard &lt;b&gt; (Sim ou Nâo) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt;* Diners &lt;b&gt; (Sim ou Nâo) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt;* Amex &lt;b&gt; (Sim ou Nâo) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt; &lt;br /&gt;Pagamento com Débito Aceitos &lt;/div&gt;		
+		&lt;div&gt;* Débito BB &lt;b&gt; (Sim ou Nâo) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt;* Débito Bradesco &lt;b&gt; (Sim ou Nâo) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt;* Débito Banrisul &lt;b&gt; (Sim ou Nâo) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt;* Débito Itaú &lt;b&gt; (Sim ou Nâo) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt; &lt;br /&gt;Pagamento com Boleto Aceitos &lt;/div&gt;		
+		&lt;div&gt;* Boleto bancário &lt;b&gt; (Sim ou Nâo) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt; &lt;br /&gt;Outras configurações&lt;/div&gt;		
+		&lt;div&gt;* Países &lt;b&gt; (Brasil) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt;* Mínimo da Compra &lt;b&gt; (Mínimo da compra para ativar o módulo) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt;* Máximo da Compra &lt;b&gt; (Máximo da compra para ativar o módulo) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt;* Custo por Transação &lt;b&gt; (Custo extra por transação feita) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt;* Custo percentual total &lt;b&gt; (Custo extra por transação total) &lt;/b&gt;&lt;/div&gt;		
+		&lt;div&gt;* Tarifa/Imposto &lt;b&gt; (Configurar de uma tarifa previamente cadastrada) &lt;/b&gt;&lt;/div&gt;		
+		
+	&lt;/div&gt;	
+	&lt;div&gt;	Licença: &lt;a href=&quot;http://www.gnu.org/licenses/gpl-3.0.html&quot;&gt;GNU/GPL v3&lt;/a&gt; - Desenvolvido por Luiz Weber - &lt;a href=&quot;http://weber.eti.br&quot;&gt;Weber TI&lt;/a&gt; 
+	&lt;/div&gt;	
+	</description>
+
+
+	<media destination="../images/stories/virtuemart/payment" folder="imagens">
+        <filename>pagseguro.jpg</filename>        
+    </media>
+
+
+	<files>
+		<filename plugin="pagsegurotransparente">pagsegurotransparente.php</filename>
+		<filename>licenca-gplv3.txt</filename>
+		<filename>leiame.txt</filename>
+		<filename>gplv3-license.txt</filename>
+		<filename>checkout_transparente_pagseguro.png</filename>	
+		<folder>assets</folder>
+		<folder>imagens</folder>
+		<folder>language</folder>
+		<folder>admin</folder>
+	</files>		
+    <administration>
+	<languages folder="language">
+		<language tag="pt-BR">pt-BR.plg_vmpayment_pagsegurotransparente.ini</language>
+		<language tag="en-GB">en-GB.plg_vmpayment_pagsegurotransparente.ini</language>
+	</languages>
+    </administration>
+	<languages folder="language">
+		<language tag="pt-BR">pt-BR.plg_vmpayment_pagsegurotransparente.ini</language>
+		<language tag="en-GB">en-GB.plg_vmpayment_pagsegurotransparente.ini</language>
+	</languages>
+	
+	<config>        
+        <fields name="params" addfieldpath="/plugins/vmpayment/pagsegurotransparente/admin/elements/">
+            <fieldset name="basic">   
+		        <field	name="payment_logos" type="vmfiles" label="Imagem"
+				description="Imagem do método de pagamento"
+				directory="/images/stories/virtuemart/payment"
+				default="default" hide_default="1" hide_none="1"
+				stripext="0"   exclude="^_" />	        
+
+
+				<field name="modo_teste" type="radio" default="1" label="Modo de teste">
+		            <option value="1">COM_VIRTUEMART_YES</option>
+		            <option value="0">COM_VIRTUEMART_NO</option>
+		        </field>
+
+				<field type="vmspacer" default="Teste" />		
+				<field name="sellermail_teste" type="text" size="60"  label="Seller Email (teste)" description="Email da conta do PagSeguro Transparente" default="testepdapi01@gmail.com"/>
+
+				<field name="token_teste" type="text" size="60"  label="Token (teste)" description="Token fornecido pelo PagSeguro" default="1ABD1FB7D88647A597AB519D75D28D53"/>
+
+				<field name="email_teste" type="text" size="60"  label="E-mail (teste)" description="E-mail de comprador teste" default=""/>
+
+				<field type="vmspacer" default="Produção" />
+				<field name="sellermail" type="text" size="60"  label="Seller Email" description="Email da conta do PagSeguro Transparente" default=""/>
+				<field name="token" type="text" size="60"  label="Token" description="Token fornecido pelo PagSeguro" default=""/>
+
+				<field type="spacer"  />		
+				<field type="vmspacer" default="Campos Extras Obrigatórios no Formulário de Registro" />
+
+				<field name="campo_nome" type="vmfield" size="30"  label="Campo Nome do cliente" description="Nome do campo Nome ( first_name )" default="first_name"/>
+				<field name="campo_sobrenome" type="vmfield" size="30"  label="Campo Sobrenome do cliente" description="Nome do campo Sobrenome ( last_name )" default="last_name"/>
+
+				<field name="campo_logradouro" type="vmfield" size="30"  label="Campo Logradouro ( do endereço )" description="Nome do campo Logradouro ( endereço mesmo )" default="address_1"/>
+		        <field name="campo_bairro" type="vmfield" size="30"  label="Campo Bairro" description="Nome do campo Bairro" default="bairro"/>
+		        <field name="campo_numero" type="vmfield" size="30"  label="Campo Número ( do endereço )" description="Nome do campo Número do Endereço do usuário" default="numero"/> 		
+		        <field name="campo_complemento" type="vmfield" size="30"  label="Campo Complemento ( do endereço )" description="Nome do campo Complemento do Endereço" default="address_2"/> 		        
+		        <field name="campo_telefone" type="vmfield" size="30"  label="Campo Telefone ( do cliente )" description="Nome do campo Telefone " default="phone_1"/>        
+				<field name="campo_cpf" type="vmfield" size="30"  label="Campo CPF ( do cliente )" description="Nome do campo CPF " default="fax"/>
+				<field name="campo_cep" type="vmfield" size="30"  label="Campo Cep ( do cliente )" description="Nome do campo Cep " default="zip"/>
+
+		        <field type="vmspacer" default="Campos Extras Opcionais" />
+
+		        <field name="campo_data_nascimento" type="vmfield" size="30"  label="Campo Data de Nascimento ( do cliente )" description="Nome do campo Data de Nascimento "/>
+		        <field name="campo_cnpj" type="vmfield" size="30"  label="Campo CNPJ ( do cliente )" description="Nome do campo CNPJ " default="cnpj"/>
+				
+		        <field type="vmspacer" default="Status postado pelo PagSeguro" />
+
+				<field name="transacao_em_andamento" type="vmorderstate" default="P" label="Status: Em Andamento" description="Status Aguardando a confirmação de pagamento" />
+				<field name="transacao_em_analise" type="vmorderstate" label="Status: Em Análise" description="Status Aguardando aprovação de risco" />
+				<field name="transacao_aprovada" type="vmorderstate" label="Status: Aprovada" description="Status Transação aprovada" default="C" />
+				<field name="transacao_concluida" type="vmorderstate" label="Status: Concluída" description="Status Transação Concluída" />
+				<field name="transacao_disputa" type="vmorderstate" default="X" label="Status: Em Disputa" description="Status Transação em Disputa" />
+		        <field name="transacao_cancelada" type="vmorderstate" default="X" label="Status: Cancelada" description="Status Transação Cancelada" />
+		        <field name="transacao_devolvida" type="vmorderstate" default="X" label="Status: Devolvida" description="Status Transação Devolvida" />
+		        <field name="transacao_chargeback" type="vmorderstate" default="X" label="Status: Chargeback" description="Status Transação Chargeback" />
+
+				
+				<field type="vmspacer" default="Configuração Parcelamento" />		
+				<field name="max_parcela_sem_juros" type="text" size="10"  label="Máx. parcelas Sem Juros" description="Número total de parcelas sem juros" default="1"/> 
+		        <field name="max_parcela_com_juros" type="text" size="10"  label="Máx. parcelas Com Juros" description="Número total de parcelas com juros" default="12" /> 
+				
+				<field name="taxa_credito" type="text" size="12"  label="Taxa Crédito à vista" description="Taxa para transações 1x no Crédito (2.99 = 2.99%)" default="2.99" />
+				<field name="taxa_parcelado" type="text" size="12"  label="Taxa Parcelado" description="Taxa para transações parcelado em mais de 2x no Crédito  (2.99 = 2.99%)" default="2.99"/>
+
+				<field type="vmspacer" default="Outras configurações" />
+		        <field name="valor_minimo" type="text" size="10"  label="Valor mínimo" description="Valor mínimo para compras na loja." default="0.01"/> 		
+			
+				<field type="vmspacer" default="Formas de Pagamento Aceitas" />		
+
+				<field name="ativar_cartao" type="radio" class="switch2" default="1" label="Ativar Cartões de Crédito">
+					<option value="0">COM_VIRTUEMART_NO</option>            
+		            <option value="1">COM_VIRTUEMART_YES</option>		
+				</field>
+				<field name="ativar_debito" type="radio" class="switch2" default="1" label="Ativar Débito em Conta">
+					<option value="0">COM_VIRTUEMART_NO</option>            
+		            <option value="1">COM_VIRTUEMART_YES</option>		
+				</field>
+				<field name="ativar_boleto" type="radio" class="switch2" default="1" label="Ativar Boleto Bancário">
+					<option value="0">COM_VIRTUEMART_NO</option>            
+		            <option value="1">COM_VIRTUEMART_YES</option>		
+				</field>		
+				
+				<field type="vmspacer" default="Cartões de Crédito Aceitos" />		
+				<field name="cartao_visa" type="radio" default="1" label="Visa">
+		            <option value="0">COM_VIRTUEMART_NO</option>            
+		            <option value="1">COM_VIRTUEMART_YES</option>
+		        </field>
+				<field name="cartao_master" type="radio" default="1" label="Mastercard">
+		            <option value="0">COM_VIRTUEMART_NO</option>            
+		            <option value="1">COM_VIRTUEMART_YES</option>
+		        </field>
+				<field name="cartao_hipercard" type="radio" default="1" label="Hipercard">
+		            <option value="0">COM_VIRTUEMART_NO</option>            
+		            <option value="1">COM_VIRTUEMART_YES</option>
+		        </field>
+		        <field name="cartao_aura" type="radio" default="1" label="Aura">
+		            <option value="0">COM_VIRTUEMART_NO</option>            
+		            <option value="1">COM_VIRTUEMART_YES</option>
+		        </field>
+		        <field name="cartao_elo" type="radio" default="1" label="Elo">
+		            <option value="0">COM_VIRTUEMART_NO</option>            
+		            <option value="1">COM_VIRTUEMART_YES</option>
+		        </field>
+
+				<field name="cartao_diners" type="radio" default="1" label="Diners">
+		            <option value="0">COM_VIRTUEMART_NO</option>            
+		            <option value="1">COM_VIRTUEMART_YES</option>
+		        </field>
+				<field name="cartao_amex" type="radio" default="1" label="Amex">
+		            <option value="0">COM_VIRTUEMART_NO</option>            
+		            <option value="1">COM_VIRTUEMART_YES</option>
+		        </field>	
+				
+				<field type="vmspacer" default="Pagamento com Débito Aceitos" />		
+				<field name="debito_bb" type="radio" default="1" label="Débito BB">
+		            <option value="0">COM_VIRTUEMART_NO</option>            
+		            <option value="1">COM_VIRTUEMART_YES</option>
+		        </field>
+				<field name="debito_bradesco" type="radio" default="1" label="Débito Bradesco">
+		            <option value="0">COM_VIRTUEMART_NO</option>            
+		            <option value="1">COM_VIRTUEMART_YES</option>
+		        </field>
+				<field name="debito_banrisul" type="radio" default="1" label="Débito Banrisul">
+		            <option value="0">COM_VIRTUEMART_NO</option>            
+		            <option value="1">COM_VIRTUEMART_YES</option>
+		        </field>
+				<field name="debito_itau" type="radio" default="1" label="Débito Itaú">
+		            <option value="0">COM_VIRTUEMART_NO</option>            
+		            <option value="1">COM_VIRTUEMART_YES</option>
+		        </field>
+				
+				<field name="debito_hsbc" type="radio" default="1" label="Débito HSBC">
+		            <option value="0">COM_VIRTUEMART_NO</option>            
+		            <option value="1">COM_VIRTUEMART_YES</option>
+		        </field>
+
+				<field type="vmspacer" default="Pagamento com Boleto Aceitos" />
+				<field name="boleto" type="radio" default="1" label="Boleto Bancário">
+					<option value="0">COM_VIRTUEMART_NO</option>            
+					<option value="1">COM_VIRTUEMART_YES</option>
+				</field>		
+				
+				<field type="vmspacer" default="Extras" />
+				<field name="load_squeezebox" type="radio" default="1" label="Carregar SqueezeBox JS">
+		            <option value="1">COM_VIRTUEMART_YES</option>
+		            <option value="0">COM_VIRTUEMART_NO</option>
+		        </field>
+
+		        <field name="url_redirecionamento" type="text" label="Url de redirecionamento" description="Url que na qual o cliente será redirecionado quando a compra for finalizada. Deixe em branco para padrão." default="" /> 
+
+		        <field name="modo_calculo_desconto" type="list" default="1" label="Modo de cálculo de descontos/tarifas">
+                    <option value="1">Modo Simples ( desconto normal )</option>
+                    <option value="2">Modo VirtueMart ( desconto progressivo )</option>
+                </field>
+
+
+				<field name="countries" type="vmcountries"  scope="com_virtuemart" default="" label="Países" description="Países para validar este pagamento"/>
+				<field name="min_amount" type="text"  label="Mínimo da Compra" description="Valor mínimo da compra pra utilizar a PagSeguro" />
+				<field name="max_amount" type="text"  label="Máximo da Compra" description="Valor Máximo da compra para utilizar a PagSeguro" />
+				<field name="cost_per_transaction" type="text"  label="Custo por Transação" description="Custo total por transação" />
+				<field name="cost_percent_total" type="text"  label="Custo percentual total" description="Custo percentual total pela venda" />
+				<field name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="Tarifa/Imposto" description="Imposto ou tarifa aplicada" />
+
+				<field name="modo_debug" type="radio" default="0" label="Modo de Debug">
+		            <option value="1">COM_VIRTUEMART_YES</option>
+		            <option value="0">COM_VIRTUEMART_NO</option>
+		        </field>
+
+				<field type="spacer"/>		
+				<field type="vmabouttransparente" path="plugins/vmpayment/pagsegurotransparente/" />		
+				<field type="vmspacer" default="Licença: &lt;a href='http://www.gnu.org/licenses/gpl-3.0.html'&gt;GNU/GPL v3&lt;/a&gt; - Desenvolvido por Luiz Weber - &lt;a href='http://weber.eti.br'&gt;Weber TI&lt;/a&gt;" />
+            </fieldset>
+        </fields>
+    </config>    
+</extension>
