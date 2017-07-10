@@ -79,7 +79,6 @@
 	<files>
 		<filename plugin="pagsegurotransparente">pagsegurotransparente.php</filename>
 		<filename>licenca-gplv3.txt</filename>
-		<filename>leiame.txt</filename>
 		<filename>gplv3-license.txt</filename>
 		<filename>checkout_transparente_pagseguro.png</filename>	
 		<folder>assets</folder>
