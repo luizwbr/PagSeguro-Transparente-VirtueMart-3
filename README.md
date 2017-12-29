@@ -102,6 +102,11 @@ Requisitos mínimos
 * JSON
 * Bibliotecas php: bcmath e intl
 
+Agradecimentos
+-------
+
+Redesign da tela de pagamentos com cartão, feito pelo @edrdesigner
+
 Licença
 -------
 
